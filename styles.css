@@ -1,0 +1,416 @@
+:root {
+  --color-bg-dark: #171717;
+  --color-bg-light: #f8f8f8;
+  --color-text-dark: #000000;
+  --color-text-light: #fbfbfb;
+  --color-link-dark: #ffb650;
+  --color-link-light: #cd241f;
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-light);
+  --color-link: var(--color-link-dark);
+  --font-family-main: "IBMPlexMono", Arial, sans-serif;
+  --transition-speed: 0.3s;
+  transition: all var(--transition-speed) ease;
+}
+
+.divider {
+  background-color: #cec7b7;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 0.25rem 0;
+}
+
+.special-divider {
+  margin-top: 2rem;
+  /* margin-bottom: rem; */
+}
+
+body.bg-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family-main);
+  font-weight: 400;
+  overflow: auto;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #171717;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+    color: #cec7b7;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #171717;
+  color: #cec7b7;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0.5rem;
+  }
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.nav-links {
+  font-size: 12px;
+  margin-top: 0;
+}
+.flex-list {
+  gap: 0;
+  row-gap: 0px;
+  column-gap: 0px;
+}
+
+/* Theme Switch buttion*/
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-and-toggle {
+  display: flex;
+  justify-content: space-between; /* This will push items to the edges */
+  align-items: center; /* Vertically center items */
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 30;
+  margin: 0;
+  display: flex; /* Make navigation items inline */
+}
+
+nav ul li {
+  margin-right: 15px;
+  padding-top: 5px ;
+  padding-inline: 20px; /* Space between nav items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.theme-switch-wrapper {
+  margin-top: 0; /* Reset margin */
+}
+
+/* Adjustments for the toggle button */
+.theme-switch {
+  height: 34px;
+  width: 60px;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nav-and-toggle {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 10px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Make navigation items inline */
+  justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+  margin: 0 10px; /* Space between nav items */
+}
+
+.theme-switch-wrapper {
+  margin-left: 10px; /* Add some space before the switch */
+}
+
+/* Adjustments for the toggle button */
+.theme-switch {
+  height: 34px;
+  width: 60px;
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    margin: 7 3px;
+    border-radius: 10px; /* Smaller margin for mobile */
+  }
+  .navigationn{
+  }
+  .header-content {
+    margin: 10 10 10 10px; /* Match the image margin for mobile */
+  }
+}
+
+/* Theme Switch Wrapper */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the switch if it's not full-width */
+}
+
+/* Theme Switch Container */
+.theme-switch {
+  display: inline-block;
+  height: 32.5px;
+  position: relative;
+  width: 60px;
+}
+
+/* Hide the default checkbox */
+.theme-switch input {
+  display: none;
+}
+
+
+
+/* Checked State */
+input:checked + .slider {
+  background-color: #161718; /* Color when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the circle to the right */
+}
+
+/* Round Slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 60%;
+}
+
+/* Hover Effect */
+.slider:hover {
+  box-shadow: 0 0 0 2px #141414; /* Outline on hover */
+}
+
+/* Active/Focus State */
+input:focus + .slider {
+  box-shadow: 0 0 1px #131414;
+}
+
+/* Dark Mode Specific */
+.dark-mode .slider {
+  background-color: #666; /* Darker background for dark mode */
+}
+
+.dark-mode input:checked + .slider {
+  background-color: #0c0c0c; /* Different color in dark mode */
+}
+
+/* Base styles for navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the navigation */
+}
+
+/* Button styles */
+
+
+
+
+.headd {
+  color: #42C796;
+}
+
+.para {
+  font-size: 18px;
+  word-spacing: 7px;
+  font-weight: 45;
+  color: #cec7b7;
+}
+
+.navigationn {
+    font-size: 20px;
+    padding-top: 10px;
+    color: #cec7b7;
+}
+
+.X{
+    color:#42C796
+}
+
+.skills {
+    line-height: 1.8;
+}
+.skills span {
+    color: #064A55;
+}
+.skils{
+    text-align: left;
+    margin: 0;
+}
+
+.project-content {
+    color: #c5c8c6;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    margin: 0 0 10px 0;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+}
+
+.project-link {
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+h2 {
+    color: #00ffcc;
+    font-size: 2rem;
+}
+
+.project-card {
+    background-color: #101010;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.project-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #171717;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+footer {
+  position: relative; /* or 'static' if you don't need special positioning */
+  z-index: 1; /* Ensure it's not above other content */
+}footer {
+  position: fixed; /* Ensure fixed positioning if desired */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Adjust if necessary to be below content */
+}body {
+  margin: 0;
+  padding-bottom: 60px; /* Height of the footer to avoid overlap */
+}
+
+footer {
+  height: 60px; /* Adjust to the height of your footer */
+  /* background-color: #333; */
+  color: #fff;
+  text-align: center;
+  line-height: 60px; /* Center text vertically if needed */
+}
